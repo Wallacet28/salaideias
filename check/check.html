@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Checklist Carboxímetro</title>
+    <style>
+      /* Estilos para a lista */
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      li.done {
+        background-color: #cfc;
+        border-color: #8c8;
+      }
+      li.done:before {
+        content: "\2713";
+        font-size: 16px;
+        color: #333;
+        margin-right: 5px;
+      }
+      .form-item {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      .form-item label {
+        width: 150px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .form-item input[type="text"], .form-item select {
+        width: 300px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .form-item select {
+        width: 150px;
+      }
+      .form-item .checklist {
+        margin-left: 160px;
+      }
+      .form-item .checklist li {
+        margin-bottom: 3px;
+      }
+      .form-item .checklist li input[type="radio"] {
+        margin-right: 10px;
+      }
+      .form-item .signature {
+        margin-left: 160px;
+      }
+      .form-item .signature label {
+        font-weight: bold;
+      }
+      .form-item .signature input[type="text"] {
+        width: 300px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Checklist Carboxímetro</h1>
+    <form>
+      <div class="form-item">
+        <label>Data:</label>
+        <input type="text" name="data" required>
+      </div>
+      <div class="form-item">
+        <label>Número do Aparelho:</label>
+        <input type="text" name="numero_aparelho" required>
+      </div>
+      <div class="form-item">
+        <label>Verificar Condições:</label>
+        <ul class="checklist">
+          <li><input type="checkbox" name="condicoes[]" value="1">Carcaça do instrumento</li>
+          <li><input type="checkbox" name="condicoes[]" value="2">Display/Visor</li>
+          <li><input type="checkbox" name="condicoes[]" value="3">Aferição/Calibração</li>
+          <li><input type="checkbox" name="condicoes[]" value="4">Bateria</li>
+          <li><input type="checkbox" name="condicoes[]" value="5">Parâmetro (não há presença de rachadura)</li>
+        </
+         </ul>
+            </div>
+                <div class="form-item">
+                    <label>1. Verificar se ao ligar o aparelho há indicação de queimado:</label>
+        <ul class="checklist">
+            <li><input type="radio" name="queimado" value="C">C</li>
+             <li><input type="radio" name="queimado" value="N">N</li>
+         </ul>
+        </div>
+        <div class="form-item">
+             <label>2. Verificar se está dentro do prazo de calibração:</label>
+        <ul class="checklist">
+             <li><input type="radio" name="calibracao" value="C">C</li>
+            <li><input type="radio" name="calibracao" value="N">N</li>
+        </ul>
+        </div>
+        <div class="form-item">
+            <label>3. Verificar se a bateria está carregada:</label>
+        <ul class="checklist">
+             <li><input type="radio" name="bateria" value="C">C</li>
+             <li><input type="radio" name="bateria" value="N">N</li>
+         </ul>
+        </div>
+        <div class="form-item">
+             <label>Assinatura:</label>
+             <input type="text" name="assinatura" required>
+        </div>
+            <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>

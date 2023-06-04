@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agendamento de Salão Chique</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Agendamento de Salão Chique</h1>
+    <form id="form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      <br>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+      <br>
+      <label for="servico">Serviço:</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione o serviço</option>
+        <option value="corte">Corte de cabelo</option>
+        <option value="coloracao">Coloração de cabelo</option>
+        <option value="manicure">Manicure</option>
+        <option value="depilacao">Depilação</option>
+      </select>
+      <br>
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" required>
+      <br>
+      <label for="horario">Horário:</label>
+      <input type="time" id="horario" name="horario" required>
+      <br>
+      <button type="submit">Agendar</button>
+    </form>
+    
+    <script>
+      document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var telefone = document.getElementById('telefone').value;
+        var servico = document.getElementById('servico').value;
+        var data = document.getElementById('data').value;
+        var horario = document.getElementById('horario').value;
+        
+        localStorage.setItem('nome', nome);
+        localStorage.setItem('email', email);
+        localStorage.setItem('telefone', telefone);
+        localStorage.setItem('servico', servico);
+        localStorage.setItem('data', data);
+        localStorage.setItem('horario', horario);
+        
+        window.location.href = 'confirmacao.html';
+		
+      });
+    </script>
+  </body>
+</html>

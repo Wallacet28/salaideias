@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Confirmação de Agendamento</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>Confirmação de Agendamento</h1>
+    <p>Obrigado pelo seu agendamento! Confira abaixo os detalhes:</p>
+    <ul>
+      <li>Nome: <span id="nome"></span></li>
+      <li>E-mail: <span id="email"></span></li>
+      <li>Telefone: <span id="telefone"></span></li>
+      <li>Serviço: <span id="servico"></span></li>
+      <li>Data: <span id="data"></span></li>
+      <li>Horário: <span id="horario"></span></li>
+    </ul>
+    
+    <script>
+      
+      var nome = localStorage.getItem('nome');
+      var email = localStorage.getItem('email');
+      var telefone = localStorage.getItem('telefone');
+      var servico = localStorage.getItem('servico');
+      var data = localStorage.getItem('data');
+      var horario = localStorage.getItem('horario');
+      
+      document.getElementById('nome').innerHTML = nome;
+      document.getElementById('email').innerHTML = email;
+      document.getElementById('telefone').innerHTML = telefone;
+      document.getElementById('servico').innerHTML = servico;
+      document.getElementById('data').innerHTML = data;
+      document.getElementById('horario').innerHTML = horario;
+     
+      localStorage.clear();
+    </script>
+  </body>
+</html>

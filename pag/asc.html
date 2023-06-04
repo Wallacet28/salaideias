@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Salão de Cabeleireiro Chique</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Salão de Cabeleireiro Chique</h1>
+		<nav>
+			<ul>
+				<li><a href="#servicos">Serviços</a></li>
+				<li><a href="#sobre">Sobre Nós</a></li>
+				<li><a href="#contato">Contato</a></li>
+				<li><a href="#agendamento">Agendamento</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<section id="servicos">
+			<h2>Serviços</h2>
+			<ul>
+				<li>Corte de cabelo masculino e feminino</li>
+				<li>Coloração e mechas</li>
+				<li>Tratamentos capilares</li>
+				<li>Penteados e maquiagem</li>
+			</ul>
+		</section>
+		
+		<section id="sobre">
+			<h2>Sobre Nós</h2>
+			<p>O Salão de Cabeleireiro Chique é um salão de beleza de alto padrão, com profissionais experientes e serviços de qualidade para atender as necessidades dos nossos clientes. Nós valorizamos a satisfação do cliente e garantimos um atendimento personalizado e exclusivo.</p>
+		</section>
+		
+		<section id="contato">
+			<h2>Contato</h2>
+			<p>Entre em contato conosco para agendar um horário ou obter mais informações sobre nossos serviços.</p>
+			<ul>
+				<li>Endereço: Rua X, 123 - Bairro Y - Cidade Z</li>
+				<li>Telefone: (99) 9999-9999</li>
+				<li>Email: contato@salaochique.com</li>
+			</ul>
+		</section>
+		
+		<section id="agendamento">
+			<h2>Agendamento</h2>
+			<form method="post" action="agendar.php">
+				<label for="nome">Nome:</label>
+				<input type="text" name="nome" id="nome" required>
+				
+				<label for="email">Email:</label>
+				<input type="email" name="email" id="email" required>
+				
+				<label for="telefone">Telefone:</label>
+				<input type="tel" name="telefone" id="telefone" required>
+				
+				<label for="servico">Serviço:</label>
+				<select name="servico" id="servico" required>
+					<option value="">Selecione um serviço</option>
+					<option value="Corte de cabelo masculino">Corte de cabelo masculino</option>
+					<option value="Corte de cabelo feminino">Corte de cabelo feminino</option>
+					<option value="Coloração e mechas">Coloração e mechas</option>
+					<option value="Tratamentos capil			ares">Tratamentos capilares</option>
+				<option value="Penteados e maquiagem">Penteados e maquiagem</option>
+			</select>
+			
+			<label for="data">Data:</label>
+			<input type="date" name="data" id="data" required>
+			
+			<label for="horario">Horário:</label>
+			<input type="time" name="horario" id="horario" required>
+			
+			<input type="submit" value="Agendar">
+		</form>
+	</section>
+</main>
+
+<footer>
+	<p>Salão de Cabeleireiro Chique - Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* Define a cor azul e verde */
+:root {
+    --azul: #2a9d8f;
+    --verde: #007d51;
+  }
+  
+  /* Define as cores de fundo e texto */
+  body {
+    background-color: var(--azul);
+    color: white;
+  }
+  
+  /* Define o estilo do botão */
+  button {
+    background-color: var(--verde);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Define o estilo do campo de entrada */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  /* Define o estilo do rótulo */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Define o estilo do título */
+  h1 {
+    font-size: 36px;
+    margin-top: 0;
+  }
+  
+  /* Define o estilo da lista */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Define o estilo dos itens da lista */
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Define o estilo da mensagem de erro */
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }

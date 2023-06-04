@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salão de Cabeleireiro de Luxo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#">Salão de Cabeleireiro de Luxo</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Agendar</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="banner">
+        <div class="content">
+          <h1>Salão de Cabeleireiro de Luxo</h1>
+          <p>Corte, penteado, coloração e muito mais.</p>
+          <a href="#" class="btn">Agendar agora</a>
+        </div>
+      </section>
+
+      <section class="services">
+        <h2>Serviços</h2>
+        <div class="service">
+          <img src="img/service1.jpg" alt="Corte de cabelo">
+          <h3>Corte de cabelo</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis pretium justo, ac tincidunt orci gravida at. Nulla nec efficitur massa.</p>
+        </div>
+        <div class="service">
+          <img src="img/service2.jpg" alt="Penteado">
+          <h3>Penteado</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis pretium justo, ac tincidunt orci gravida at. Nulla nec efficitur massa.</p>
+        </div>
+        <div class="service">
+          <img src="img/service3.jpg" alt="Coloração">
+          <h3>Coloração</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis pretium justo, ac tincidunt orci gravida at. Nulla nec efficitur massa.</p>
+        </div>
+      </section>
+
+      <section class="appointment">
+        <h2>Agendar um horário</h2>
+        <form id="appointment-form">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="phone">Telefone:</label>
+          <input type="tel" id="phone" name="phone" required>
+          <label for="date">Data:</label>
+          <input type="date" id="date" name="date" required>
+          <label for="time">Horário:</label>
+          <select id="time" name="time" required>
+            <option value="9:00">9:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+          </select>
+          <button type="submit">Agendar agora</button>
+        </form>
+      </section>
+    
+      <section class="contact">
+        <h2>Entre em contato conosco</h2>
+        <form>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Enviar mensagem</button>
+        </form>
+      </section>
+    
+      <section class="gallery">
+        <h2>Galeria</h2>
+        <div class="photo">
+          <img src="img/gallery1.jpg" alt="Corte de cabelo">
+        </div>
+        <div class="photo">
+          <img src="img/gallery2.jpg" alt="Penteado">
+        </div>
+        <div class="photo">
+          <img src="img/gallery3.jpg" alt="Coloração">
+        </div>
+        <div class="photo">
+          <img src="img/gallery4.jpg" alt="Maquiagem">
+        </div>
+        <div class="photo">
+          <img src="img/gallery5.jpg" alt="Barba">
+        </div>
+        <div class="photo">
+          <img src="img/gallery6.jpg" alt="Corte infantil">
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Agendar</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </footer>
+    
+    <script src="app.js"></script>
+    </body>
+</html>

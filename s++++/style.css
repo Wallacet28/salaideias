@@ -1,0 +1,116 @@
+css
+Copy code
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #444444;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 40px;
+}
+
+h1 {
+	font-size: 48px;
+	margin: 0;
+}
+
+nav {
+	margin-top: 20px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+main {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+}
+
+label {
+	font-size: 18px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"] {
+	padding: 10px;
+	font-size: 18px;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px;
+	width: 100%;
+}
+
+input[type="submit"] {
+	padding: 10px 20px;
+	font-size: 18px;
+	background-color: #444444;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+iframe {
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+iframe iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	background-color: #EEEEEE;
+	padding: 20px;
+	text-align: center;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Salão de Cabeleireiro Top</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<!-- Cabeçalho -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Salão de Cabeleireiro Top</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Sobre Nós</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Serviços</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contato</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Meio -->
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Salão de Cabeleireiro Top</h1>
+				<p>Bem-vindo ao nosso salão de cabeleireiro. Aqui você encontra os melhores profissionais, os melhores produtos e o melhor atendimento. Conheça nossos serviços e agende seu horário agora mesmo.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<h2>História do Salão</h2>
+				<p>O Salão de Cabeleireiro Top foi fundado em 2000 por João Silva, um renomado cabeleireiro com mais de 20 anos de experiência. Desde então, o salão vem crescendo e se consolidando como um dos melhores da região.</p>
+			</div>
+			<div class="col-sm-4">
+				<h2>Fotos dos Penteados</h2>
+				<div class="card">
+					<img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+				</div>
+				<div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h2>Vídeos dos Penteados</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h2>Agendamento</h2>
+                <form action="agendar.php" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data:</label>
+                        <input type="date" class="form-control" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="horario">Horário:</label>
+                        <input type="time" class="form-control" id="horario" name="horario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servico">Serviço:</label>
+                        <select class="form-control" id="servico" name="servico" required>
+                            <option value="">Selecione</option>
+                            <option value="corte">Corte</option>
+                            <option value="escova">Escova</option>
+                            <option value="coloracao">Coloração</option>
+                            <option value="alisamento">Alisamento</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agendar</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h2>Calendário de Agendamentos</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Horário</th>
+                                <th>Serviço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                // AQUI VOCÊ PODE COLOCAR UM CÓDIGO QUE BUSCA AS DATAS AGENDADAS NO BANCO DE DADOS
+                                // E PREENCHE A TABELA COM ELAS. ESSE CÓDIGO É APENAS UM EXEMPLO.
+                                $agendamentos = array(
+                                    array("2023-02-26", "09:00", "Corte"),
+                                    array("2023-02-27", "14:30", "Coloração"),
+                                    array("2023-02-28", "11:15", "Escova")
+                                    );
+                                    foreach ($agendamentos as $agendamento) {
+                                    echo "<tr>";
+                                    echo "<td>" . date("d/m/Y", strtotime($agendamento[0])) . "</td>";
+                                    echo "<td>" . $agendamento[1] . "</td>";
+                                    echo "<td>" . $agendamento[2] . "</td>";
+                                    echo "</tr>";
+                                    }
+                                    ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Salão de Cabeleireiro Top &copy; 2023</p>
+                </div>
+                <div class="col-sm-6">
+                    <a href="politica_de_privacidade.html" class="text-white float-right">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

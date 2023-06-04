@@ -1,0 +1,233 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Estilos gerais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #eee;
+}
+
+/* Serviços */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4rem 0;
+}
+
+.service {
+  width: 30%;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.service h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service p {
+  font-size: 1.2rem;
+}
+
+/* Chamada para ação */
+.cta {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.cta button {
+  font-size: 1.5rem;
+
+/* Formulário */
+.form {
+   background-color: #fff;
+   padding: 4rem 2rem;
+   margin-bottom: 4rem;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   text-align: center;
+}
+    
+.form h2 {
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+}
+    
+.form input {
+   display: block;
+   width: 100%;
+   padding: 1rem;
+   margin-bottom: 1rem;
+   font-size: 1.2rem;
+   border: none;
+   border-radius: 5px;
+}
+    
+.form label {
+   display: block;
+   font-size: 1.2rem;
+   margin-bottom: 0.5rem;
+}
+    
+.form button {
+   font-size: 1.5rem;
+   padding: 1rem 2rem;
+   background-color: #333;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+    
+.form button:hover {
+   background-color: #555;
+}
+    
+    /* Rodapé */
+footer {
+   background-color: #333;
+   color: #fff;
+   padding: 2rem;
+   text-align: center;
+}
+    
+footer p {
+   font-size: 1.2rem;
+   margin-bottom: 0.5rem;
+}
+    
+.social-icons {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 1rem;
+}
+    
+.social-icons a {
+   display: block;
+   margin: 0 0.5rem;
+   font-size: 1.5rem;
+   color: #fff;
+   transition: color 0.3s ease;
+}
+    
+.social-icons a:hover {
+   color: #bbb;
+}  

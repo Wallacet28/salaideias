@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Salão de Cabeleireiro Top</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		#calendar {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		#calendar table {
+			table-layout: fixed;
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+			font-size: 14px;
+		}
+		#calendar th,
+		#calendar td {
+			text-align: center;
+			vertical-align: top;
+			padding: 5px;
+			border: 1px solid #ccc;
+		}
+		#calendar th {
+			background-color: #f0f0f0;
+		}
+		#calendar td {
+			min-height: 80px;
+		}
+		#calendar .today {
+			background-color: #f5f5f5;
+		}
+		#calendar .event {
+			background-color: #ffc107;
+			color: #fff;
+		}
+		#calendar .past {
+			background-color: #eaeaea;
+			color: #999;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">Salão de Cabeleireiro Top</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Sobre</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Serviços</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contato</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-md-6">
+				<h1>Salão de Cabeleireiro Top</h1>
+				<p>O Salão de Cabeleireiro Top é um dos mais renomados salões de beleza do Brasil, oferecendo serviços de alta qualidade para homens e mulheres há mais de 20 anos.</p>
+				<p>Nossa equipe de profissionais alt</p>
+            </div>   
+        </div>    
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Nossos serviços</h2>
+            <p>
+              Oferecemos diversos serviços para cuidar da beleza e saúde dos seus cabelos. Entre eles:
+            </p>
+            <ul>
+              <li>Corte feminino e masculino</li>
+              <li>Coloração</li>
+              <li>Tratamentos capilares</li>
+              <li>Penteados para ocasiões especiais</li>
+            </ul>
+            <p>
+              Nossa equipe é formada por profissionais experientes e qualificados, que estão sempre em busca das melhores técnicas e produtos para oferecer um serviço de qualidade aos nossos clientes.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Agende seu horário</h2>
+            <form method="post" action="agendamento.php">
+              <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" required>
+              </div>
+              <div class="form-group">
+                <label for="servico">Serviço:</label>
+                <select class="form-control" id="servico" name="servico" required>
+                  <option value="">Selecione um serviço</option>
+                  <option value="corte-feminino">Corte feminino</option>
+                  <option value="corte-masculino">Corte masculino</option>
+                  <option value="coloracao">Coloração</option>
+                  <option value="tratamento-capilar">Tratamento capilar</option>
+                  <option value="penteado">Penteados para ocasiões especiais</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="date" class="form-control" id="data" name="data" required>
+              </div>
+              <div class="form-group">
+                <label for="hora">Horário:</label>
+                <input type="time" class="form-control" id="hora" name="hora" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Agendar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <h2>Agenda</h2>
+        <div id="calendar"></div>
+      </div>
+  
+      <footer class="footer">
+        <div class="container">
+          <p class="text-muted">Política de privacidade | Todos os direitos reservados</p>
+        </div>
+      </footer>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: [
+              <?php
+                // AQUI VOCÊ PODE COLOCAR UM CÓDIGO QUE BUSCA AS DATAS AGENDADAS NO BANCO DE DADOS
+                // E PREENCHE A TABELA COM ELAS. ESSE CÓDIGO É APENAS UM EXEMPLO.
+                $agendamentos = array(
+                  array("2023-02-26", "09:00", "Corte"),
+                  array("2023-02-27", "14:30", "Coloração"),
+                  array("2023-03-01", "11:00", "Penteado"),
+                  array("2023-03-03", "16:00", "Barba"),
+                );
+                foreach ($agendamentos as $agendamento) {
+                  $date = $agendamento[0];
+                  $time = $agendamento[1];
+                  $service = $agendamento[2];
+                  echo "{title: '$service', start: '$date" . "T" . "$time'},\n";
+                }
+              ?>
+            ]
+          });
+          calendar.render();
+        });
+      </script>
+</body>
+</html>      

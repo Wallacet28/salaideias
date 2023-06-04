@@ -1,0 +1,99 @@
+/* Estilos gerais */
+
+* {
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+	margin-top: 50px;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	margin-top: 50px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"] {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	margin-top: 10px;
+}
+
+select {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	margin-top: 10px;
+}
+
+input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #555;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Estilos específicos */
+
+section {
+	margin-top: 50px;
+}
+
+section h2 {
+	text-align: center;
+	color: #333;
+}
+
+section p {
+	text-align: center;
+	color: #666;
+}
+
+section form {
+	margin-top: 20px;
+}
